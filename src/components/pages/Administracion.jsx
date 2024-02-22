@@ -29,10 +29,10 @@ const Administracion = () => {
               <td><img src="" alt="" /></td>
               <td>
                 <div className="d-flex justify-content-around">
-                <a className="btn btn-success" href="">
+                <a className="btn btn-success mx-1" href="">
                   Editar
                 </a>{" "}
-                <a className="btn btn-danger" href="">
+                <a className="btn btn-danger mx-1" href="">
                   Borrar
                 </a>
                 </div>
