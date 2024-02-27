@@ -1,9 +1,10 @@
-import { Button, Form} from "react-bootstrap";
+import { Button, Container, Form} from "react-bootstrap";
 
-const EditarReceta = () => {
+const FormularioReceta = () => {
   return (
+    <Container className="mainContainer">
     <section className="py-3">
-        <h3>Editar Receta</h3>
+        <h3>Formulario</h3>
         <hr />
       <Form>
           <Form.Group md="4" controlId="validationCustom01">
@@ -73,7 +74,8 @@ const EditarReceta = () => {
         <Button type="submit">Submit form</Button>
       </Form>
     </section>
+    </Container>
   );
 };
 
-export default EditarReceta;
+export default FormularioReceta;

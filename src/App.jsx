@@ -4,6 +4,8 @@ import './App.css'
 import { Route, Routes } from "react-router"
 import Menu from "./components/common/Menu"
 import Administracion from "./components/pages/Administracion"
+import DetalleReceta from "./components/pages/DetalleReceta"
+import FormularioReceta from "./components/pages/FormularioReceta"
 import { BrowserRouter } from "react-router-dom"
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
     <Menu></Menu>
     <Routes>
       <Route exact path='/Administracion' element={<Administracion></Administracion>}></Route>
+      <Route exact path='/DetalleReceta' element={<DetalleReceta></DetalleReceta>}></Route>
+      <Route exact path='/FormularioReceta' element={<FormularioReceta></FormularioReceta>}></Route>
     </Routes>
     <footer className="bg-dark text-light">
       <p className='text-center'>&copy; Todos los derechos reservados</p>

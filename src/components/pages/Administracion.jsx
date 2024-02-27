@@ -1,4 +1,5 @@
 import { Container, Table } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const Administracion = () => {
   return (
@@ -9,9 +10,9 @@ const Administracion = () => {
           <h3>Administracion</h3>
         </div>
         <div className="col-12 col-md-1">
-          <a className="btn btn-primary" href="">
+          <NavLink className="btn btn-primary" href="">
           <i className="bi bi-file-earmark-plus-fill"></i>
-          </a>
+          </NavLink>
         </div>
       </div>
         <Table striped bordered hover responsive>
@@ -30,12 +31,18 @@ const Administracion = () => {
               <td><img src="" alt="" /></td>
               <td>
                 <div className="d-flex justify-content-around">
-                <a className="btn btn-success mx-1" href="">
+                  
+                <NavLink className="btn btn-success mx-1" end
+                  to="/DetalleReceta">
+                <i className="bi bi-eye-fill"></i>
+                </NavLink>
+                <NavLink className="btn btn-warning mx-1" end
+                  to="/FormularioReceta">
                 <i className="bi bi-pencil-square"></i>
-                </a>{" "}
-                <a className="btn btn-danger mx-1" href="">
+                </NavLink>
+                <NavLink className="btn btn-danger mx-1" href="">
                 <i className="bi bi-trash3-fill"></i>
-                </a>
+                </NavLink>
                 </div>
               </td>
             </tr>
