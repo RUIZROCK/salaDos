@@ -1,1 +1,133 @@
-{}
+{
+    "recetas": [
+      {
+        "titulo": "Pasta Alfredo con Pollo",
+        "subtitulo": "¡Deliciosa pasta cremosa italiana!",
+        "tipo": "especial",
+        "detalles": {
+          "proceso": [
+            "Cocina la pasta.",
+            "Prepara salsa cremosa.",
+            "Añade pollo."
+          ],
+          "ingredientes": [
+            "Pasta fettuccine",
+            "Pechuga de pollo",
+            "Crema de leche",
+            "Queso parmesano"
+          ]
+        },
+        "img_url": "https://ejemplo.com/pasta_alfredo_pollo.jpg"
+      },
+      {
+        "titulo": "Sushi de Salmón",
+        "subtitulo": "Opción fresca y saludable japonesa.",
+        "tipo": "comun",
+        "detalles": {
+          "proceso": [
+            "Cocina arroz.",
+            "Enrolla con salmón.",
+            "Corta y sirve."
+          ],
+          "ingredientes": [
+            "Arroz para sushi",
+            "Salmón fresco",
+            "Alga nori"
+          ]
+        },
+        "img_url": "https://ejemplo.com/sushi_salmón.jpg"
+      },
+      {
+        "titulo": "Empanadas Argentinas",
+        "subtitulo": "Bocado irresistible de Argentina.",
+        "tipo": "tradicional",
+        "detalles": {
+          "proceso": [
+            "Prepara masa.",
+            "Rellena y hornea."
+          ],
+          "ingredientes": [
+            "Harina de trigo",
+            "Carne picada",
+            "Cebolla",
+            "Aceitunas verdes"
+          ]
+        },
+        "img_url": "https://ejemplo.com/empanadas_argentinas.jpg"
+      },
+      {
+        "titulo": "Hamburguesa Clásica",
+        "subtitulo": "Hamburguesa jugosa y llena de sabor.",
+        "tipo": "comun",
+        "detalles": {
+          "proceso": [
+            "Forma y cocina la carne.",
+            "Arma la hamburguesa."
+          ],
+          "ingredientes": [
+            "Carne molida de res",
+            "Pan para hamburguesa",
+            "Lechuga",
+            "Tomate"
+          ]
+        },
+        "img_url": "https://ejemplo.com/hamburguesa_clasica.jpg"
+      },
+      {
+        "titulo": "Pizza Margarita",
+        "subtitulo": "Pizza simple y deliciosa italiana.",
+        "tipo": "especial",
+        "detalles": {
+          "proceso": [
+            "Extiende masa.",
+            "Cubre con salsa y mozzarella.",
+            "Hornea y decora."
+          ],
+          "ingredientes": [
+            "Masa de pizza",
+            "Salsa de tomate",
+            "Mozzarella"
+          ]
+        },
+        "img_url": "https://ejemplo.com/pizza_margarita.jpg"
+      },
+      {
+        "titulo": "Tacos de Carnitas",
+        "subtitulo": "Platillo mexicano auténtico.",
+        "tipo": "comun",
+        "detalles": {
+          "proceso": [
+            "Cocina carne.",
+            "Rellena tortillas y sirve."
+          ],
+          "ingredientes": [
+            "Carnitas de cerdo",
+            "Tortillas de maíz",
+            "Cebolla",
+            "Cilantro"
+          ]
+        },
+        "img_url": "https://ejemplo.com/tacos_carnitas.jpg"
+      },
+      {
+        "titulo": "Ensalada Griega",
+        "subtitulo": "Sabores mediterráneos en cada bocado.",
+        "tipo": "navidad",
+        "detalles": {
+          "proceso": [
+            "Mezcla ingredientes.",
+            "Adereza y sirve."
+          ],
+          "ingredientes": [
+            "Lechuga",
+            "Pepino",
+            "Tomate",
+            "Aceitunas",
+            "Queso feta"
+          ]
+        },
+        "img_url": "https://ejemplo.com/ensalada_griega.jpg"
+      }
+    ]
+  }
+  
