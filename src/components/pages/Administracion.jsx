@@ -10,7 +10,8 @@ const Administracion = () => {
           <h3>Administracion</h3>
         </div>
         <div className="col-12 col-md-1">
-          <NavLink className="btn btn-primary" href="">
+          <NavLink className="btn btn-primary" end
+                  to="/FormularioReceta">
           <i className="bi bi-file-earmark-plus-fill"></i>
           </NavLink>
         </div>
