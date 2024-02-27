@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const DetalleReceta = () => {
   return (
@@ -31,7 +32,8 @@ const DetalleReceta = () => {
             laborum quaerat quasi deleniti quas vel adipisci placeat, natus et
             repudiandae repellendus?
           </p>
-          <a className="btn btn-primary" href="">Volver</a>
+          <NavLink className="my-3 btn btn-primary" end
+                  to="/Administracion">Volver</NavLink>
         </div>
       </div>
     </section>
