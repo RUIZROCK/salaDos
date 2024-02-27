@@ -15,7 +15,7 @@ export const nuevoRecetaAPI = async (receta)=>{
     }
 }
 
-export const leerProductosAPI = async () => {
+export const leerRecetasAPI = async () => {
     try {
       const respuesta = await fetch(URI_Receta);
       console.log(respuesta);
@@ -25,4 +25,14 @@ export const leerProductosAPI = async () => {
     }
   };
 
-  
+  export const borrarRecetaAPI = async (id) => {
+    try {
+      const respuesta = await fetch(`${URI_Receta}/${id}`, {
+        method: "DELETE",
+      });
+      console.log(respuesta);
+      return respuesta;
+    } catch (error) {
+      console.log(error);
+    }
+  };
