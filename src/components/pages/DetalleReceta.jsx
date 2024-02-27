@@ -1,5 +1,8 @@
+import { Container } from "react-bootstrap";
+
 const DetalleReceta = () => {
   return (
+    <Container className="mainContainer">
     <section>
       <div className="row d-flex justify-content-between py-3">
         <div className="col-12 col-md-4">
@@ -32,6 +35,7 @@ const DetalleReceta = () => {
         </div>
       </div>
     </section>
+    </Container>
   );
 };
 
