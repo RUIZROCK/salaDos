@@ -46,3 +46,19 @@ export const leerRecetasAPI = async () => {
       console.log(error);
     }
   };
+
+  export const modificarRecetaAPI = async (receta, id) => {
+    try {
+      const respuesta = await fetch(`${URI_Receta}/${id}`,{
+        method: "PUT",
+        headers:{
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(receta)
+      })
+      console.log(respuesta);
+      return respuesta;
+    } catch (error) {
+      console.log(error);
+    }
+  };
