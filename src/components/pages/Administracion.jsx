@@ -1,7 +1,8 @@
-import { Table } from "react-bootstrap";
+import { Container, Table } from "react-bootstrap";
 
 const Administracion = () => {
   return (
+    <Container className="mainContainer">
     <section className="py-3">
       <div className="row d-flex justify-content-between py-2 ">
         <div className="col-12 col-md-3">
@@ -9,7 +10,7 @@ const Administracion = () => {
         </div>
         <div className="col-12 col-md-1">
           <a className="btn btn-primary" href="">
-            Nuevo
+          <i className="bi bi-file-earmark-plus-fill"></i>
           </a>
         </div>
       </div>
@@ -30,10 +31,10 @@ const Administracion = () => {
               <td>
                 <div className="d-flex justify-content-around">
                 <a className="btn btn-success mx-1" href="">
-                  Editar
+                <i className="bi bi-pencil-square"></i>
                 </a>{" "}
                 <a className="btn btn-danger mx-1" href="">
-                  Borrar
+                <i className="bi bi-trash3-fill"></i>
                 </a>
                 </div>
               </td>
@@ -41,6 +42,7 @@ const Administracion = () => {
           </tbody>
         </Table>
     </section>
+    </Container>
   );
 };
 

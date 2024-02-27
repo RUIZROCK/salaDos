@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap-icons/font/bootstrap-icons.min.css";
 import './App.css'
 import { Route, Routes } from "react-router"
 import Menu from "./components/common/Menu"
