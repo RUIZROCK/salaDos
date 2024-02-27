@@ -1,4 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -9,9 +10,9 @@ const Menu = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-light" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto d-flex justify-content-end w-100">
-              <Nav.Link className="text-light" href="#home">Inicio</Nav.Link>
-              <Nav.Link className="text-light" href="#link">Administracion</Nav.Link>
-              <Nav.Link className="text-light" href="#link">Registrate!</Nav.Link>
+              <NavLink end className="text-light" href="#home">Inicio</NavLink>
+              <NavLink end className="text-light" to="/Administracion">Administracion</NavLink>
+              <NavLink end className="text-light" href="#link">Registrate!</NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
