@@ -21,7 +21,8 @@ function App() {
     <Routes>
       <Route exact path='/Administracion' element={<Administracion></Administracion>}></Route>
       <Route exact path='/DetalleReceta' element={<DetalleReceta></DetalleReceta>}></Route>
-      <Route exact path='/FormularioReceta' element={<FormularioReceta></FormularioReceta>}></Route>
+      <Route exact path='/FormularioReceta/nuevo' element={<FormularioReceta editar={false} titulo="Nueva Receta" ></FormularioReceta>}></Route>
+      <Route exact path='/FormularioReceta/editar/:id' element={<FormularioReceta editar={true} titulo="Editar Receta"></FormularioReceta>}></Route>
     </Routes>
 
     <Footer>

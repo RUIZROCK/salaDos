@@ -1,20 +1,84 @@
+import { useEffect } from "react";
 import { Button, Container, Form} from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useNavigate, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
+import { nuevoRecetaAPI, modificarRecetaAPI, obtenerRecetaAPI } from "../helpers/queries";
 
-const FormularioReceta = () => {
+
+const FormularioReceta = ({editar, titulo}) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
+    setValue
   } = useForm();
+const {id} = useParams();
+const navegacion = useNavigate();
+
+  useEffect(()=>{
+    if(editar){
+      cargarDatosReceta();
+    }
+  },[])
+
+  const cargarDatosReceta = async()=>{
+    console.log(id)
+    const respuesta = await obtenerRecetaAPI(id)
+    if(respuesta.status === 200){
+      const recetaBuscado = await respuesta.json();
+      setValue('titulo', recetaBuscado.titulo);
+      setValue('subtitulo', recetaBuscado.subtitulo);
+      setValue('tipo', recetaBuscado.tipo);
+      setValue('img_url', recetaBuscado.img_url);
+      setValue('detalles', recetaBuscado.detalles);
+    }
+  }
 
   const onSubmit = async (receta) => {
-    receta===null? alert("Carga exitosa"):alert("Error");
+    console.log(receta);
+    if (editar) {
+      console.log('aqui tendria que editar');
+      const respuesta = await modificarRecetaAPI(receta, id);
+      if(respuesta.status === 200){
+        Swal.fire({
+          title: "Receta modificado",
+          text: `Lac Receta "${receta.titulo}" fue modificado correctamente`,
+          icon: "success",
+        });
+        navegacion('/administrador');
+      }else{
+        Swal.fire({
+          title: "Ocurrio un error",
+          text: `La Receta "${receta.titulo}" no pudo ser modificado. Intenta esta operación en unos minutos.`,
+          icon: "error",
+        });
+      }
+    } else {
+      const respuesta = await nuevoRecetaAPI(receta);
+      if (respuesta.status === 201) {
+        Swal.fire({
+          title: "Receta creado",
+          text: `La Receta "${receta.titulo}" fue creado correctamente`,
+          icon: "success",
+        });
+        reset();
+      } else {
+        Swal.fire({
+          title: "Ocurrio un error",
+          text: `La Receta "${receta.titulo}" no pudo ser creado. Intenta esta operación en unos minutos.`,
+          icon: "error",
+        });
+      }
+      console.log(respuesta);
+    }
   };
+
   return (
     <Container className="mainContainer">
     <section className="py-3">
-        <h3>Formulario</h3>
+        <h3>{titulo}</h3>
         <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group md="4" controlId="validationCustom01">
