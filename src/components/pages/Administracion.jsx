@@ -1,20 +1,48 @@
 import { Container, Table } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import { leerRecetasAPI } from "../helpers/queries";
+import { useEffect, useState } from "react";
+import ItemReceta from "./Receta/ItemReceta";
 
 const Administracion = () => {
+  const [recetas, setRecetas] = useState([]);
+
+  useEffect(() => {
+    obtenerRecetas();
+  }, []);
+
+  const obtenerRecetas = async () => {
+    const respuesta = await leerRecetasAPI();
+    if (respuesta.status === 200) {
+      const datos = await respuesta.json();
+      setRecetas(datos);
+    } else {
+      Swal.fire({
+        title: "Ocurrio un error",
+        text: `Intenta esta operación en unos minutos.`,
+        icon: "error",
+      });
+    }
+  };
+
   return (
     <Container className="mainContainer">
-    <section className="py-3">
-      <div className="row d-flex justify-content-between py-2 ">
-        <div className="col-12 col-md-3">
-          <h3>Administracion</h3>
+      <section className="py-3">
+        <div className="row d-flex justify-content-between py-2 ">
+          <div className="col-12 col-md-3">
+            <h3>Administracion</h3>
+          </div>
+          <div className="col-12 col-md-1">
+            <Link
+              className="btn btn-primary"
+              end
+              to="/FormularioReceta/nuevo"
+            >
+              <i className="bi bi-file-earmark-plus-fill"></i>
+            </Link>
+          </div>
         </div>
-        <div className="col-12 col-md-1">
-          <NavLink className="btn btn-primary" href="">
-          <i className="bi bi-file-earmark-plus-fill"></i>
-          </NavLink>
-        </div>
-      </div>
         <Table striped bordered hover responsive>
           <thead>
             <tr>
@@ -25,30 +53,12 @@ const Administracion = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Locro!</td>
-              <td><img src="" alt="" /></td>
-              <td>
-                <div className="d-flex justify-content-around">
-                  
-                <NavLink className="btn btn-success mx-1" end
-                  to="/DetalleReceta">
-                <i className="bi bi-eye-fill"></i>
-                </NavLink>
-                <NavLink className="btn btn-warning mx-1" end
-                  to="/FormularioReceta">
-                <i className="bi bi-pencil-square"></i>
-                </NavLink>
-                <NavLink className="btn btn-danger mx-1" href="">
-                <i className="bi bi-trash3-fill"></i>
-                </NavLink>
-                </div>
-              </td>
-            </tr>
+            {
+              recetas.map((receta)=> <ItemReceta key={receta.id} receta={receta} setReceta={setRecetas}></ItemReceta>)
+            }
           </tbody>
         </Table>
-    </section>
+      </section>
     </Container>
   );
 };
