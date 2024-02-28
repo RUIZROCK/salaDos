@@ -36,11 +36,13 @@ h1{
   font-size:xx-large;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: auto;
+  padding: 2rem;
+
 
 }
 
-.h2 {
+h2 {
   text-align: center;
-  color: #d11514;
 font-family: Georgia, 'Times New Roman', Times, serif;
+padding: 3rem;
 }
