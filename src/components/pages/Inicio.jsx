@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 const Inicio = () => {
     return (
         <>
-        <h1> "Las Mejores Recetas para Dos" </h1>
+        <h1> Las Mejores Recetas para Dos</h1> 
             <Container className="mainContainer display-3">
                 <img
                     className="banner"
@@ -14,7 +14,7 @@ const Inicio = () => {
             </Container>
             <Container  className="mainContainer ">
             <section>
-                <h2 className="h2"> "Cocinar siempre es mejor de a 2" </h2>
+                <h2 className="h2"> Cocinar siempre es mejor de a 2</h2>
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
