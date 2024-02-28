@@ -24,7 +24,7 @@ const Inicio = () => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the content.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="primary">Ver Receta</Button>
                             </Card.Body>
                         </Card>
 
@@ -36,7 +36,7 @@ const Inicio = () => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the content.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="primary">Ver Receta</Button>
                             </Card.Body>
                         </Card>
                         <Card style={{ width: '18rem' }}>
@@ -47,7 +47,7 @@ const Inicio = () => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the content.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="primary">Ver Receta</Button>
                             </Card.Body>
                         </Card>
                     </Row>
@@ -61,7 +61,7 @@ const Inicio = () => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the content.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="primary">Ver Receta</Button>
                             </Card.Body>
                         </Card>
 
@@ -73,7 +73,7 @@ const Inicio = () => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the content.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="primary">Ver Receta</Button>
                             </Card.Body>
                         </Card>
 
@@ -85,7 +85,7 @@ const Inicio = () => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the content.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="primary">Ver Receta</Button>
                             </Card.Body>
                         </Card>
                     </Row>
