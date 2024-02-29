@@ -21,7 +21,6 @@ function App() {
       
         <Routes>
           <Route exact path='/' element={ <Inicio></Inicio>}></Route>
-          <Route exact path='/Inicio' element={ <Inicio></Inicio>}></Route>
           <Route exact path='/Administracion' element={<Administracion></Administracion>}></Route>
           <Route exact path='/DetalleReceta/:id' element={<DetalleReceta></DetalleReceta>}></Route>
           <Route exact path='/FormularioReceta/nuevo' element={<FormularioReceta editar={false} titulo="Nueva Receta" ></FormularioReceta>}></Route>

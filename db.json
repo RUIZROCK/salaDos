@@ -5,19 +5,8 @@
         "titulo": "Pasta Alfredo con Pollo",
         "subtitulo": "¡Deliciosa pasta cremosa italiana!",
         "tipo": "especial",
-        "detalles": {
-          "proceso": [
-            "Cocina la pasta.",
-            "Prepara salsa cremosa.",
-            "Añade pollo."
-          ],
-          "ingredientes": [
-            "Pasta fettuccine",
-            "Pechuga de pollo",
-            "Crema de leche",
-            "Queso parmesano"
-          ]
-        },
+        "detalles":
+            "Cocina la pasta.Prepara salsa cremosa.Añade pollo.ingredientes:Pasta fettuccine,Pechuga de pollo,Crema de leche,Queso parmesano",
         "img_url": "https://www.justspices.es/media/recipe/pollo-alfredo.jpg"
       },
       {
@@ -25,18 +14,8 @@
         "titulo": "Sushi de Salmón",
         "subtitulo": "Opción fresca y saludable japonesa.",
         "tipo": "comun",
-        "detalles": {
-          "proceso": [
-            "Cocina arroz.",
-            "Enrolla con salmón.",
-            "Corta y sirve."
-          ],
-          "ingredientes": [
-            "Arroz para sushi",
-            "Salmón fresco",
-            "Alga nori"
-          ]
-        },
+        "detalles": 
+            "Cocina arroz.Enrolla con salmón.Corta y sirve. ingredientes:Arroz para sushi,Salmón fresco,Alga nori",
         "img_url": "https://www.oliveradatenea.com/wp-content/uploads/2023/06/Sushi-rolls-de-salmon-y-Olivada-Olivera-dAtenea.jpg"
       },
       {
@@ -44,18 +23,8 @@
         "titulo": "Empanadas Argentinas",
         "subtitulo": "Bocado irresistible de Argentina.",
         "tipo": "tradicional",
-        "detalles": {
-          "proceso": [
-            "Prepara masa.",
-            "Rellena y hornea."
-          ],
-          "ingredientes": [
-            "Harina de trigo",
-            "Carne picada",
-            "Cebolla",
-            "Aceitunas verdes"
-          ]
-        },
+        "detalles": 
+            "Prepara masa.Rellena y hornea.ingredientes:Harina de trigo,Carne picada,Cebolla,Aceitunas verdes",
         "img_url": "https://previews.123rf.com/images/albertgonzlez/albertgonzlez2212/albertgonzlez221202682/196180801-empanadas-argentinas-en-forma-de-corazones-receta-de-san-valent%C3%ADn.jpg"
       },
       {
@@ -63,18 +32,8 @@
         "titulo": "Hamburguesa Clásica",
         "subtitulo": "Hamburguesa jugosa y llena de sabor.",
         "tipo": "comun",
-        "detalles": {
-          "proceso": [
-            "Forma y cocina la carne.",
-            "Arma la hamburguesa."
-          ],
-          "ingredientes": [
-            "Carne molida de res",
-            "Pan para hamburguesa",
-            "Lechuga",
-            "Tomate"
-          ]
-        },
+        "detalles": 
+            "Forma y cocina la carne.Arma la hamburguesa.ingredientes:Carne molida de res,Pan para hamburguesa,Lechuga,Tomate",
         "img_url": "https://i0.wp.com/www.pasionthermomix.co/wp-content/uploads/2019/04/hamburguesa-americana-de-0-a-100.jpg?fit=768%2C480&ssl=1"
       },
       {
@@ -82,55 +41,24 @@
         "titulo": "Pizza Margarita",
         "subtitulo": "Pizza simple y deliciosa italiana.",
         "tipo": "especial",
-        "detalles": {
-          "proceso": [
-            "Extiende masa.",
-            "Cubre con salsa y mozzarella.",
-            "Hornea y decora."
-          ],
-          "ingredientes": [
-            "Masa de pizza",
-            "Salsa de tomate",
-            "Mozzarella"
-          ]
-        },
+        "detalles": 
+            "Extiende masa.Cubre con salsa y mozzarella.Hornea y decora.ingredientes:Masa de pizza,Salsa de tomate,Mozzarella",
         "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc2YfCU2DGecuFdAS1WnCDBNQmIS_CwNyQ5JDL6Yu9VQ&s"
       },
       { "id": 6,
         "titulo": "Tacos de Carnitas",
         "subtitulo": "Platillo mexicano auténtico.",
         "tipo": "comun",
-        "detalles": {
-          "proceso": [
-            "Cocina carne.",
-            "Rellena tortillas y sirve."
-          ],
-          "ingredientes": [
-            "Carnitas de cerdo",
-            "Tortillas de maíz",
-            "Cebolla",
-            "Cilantro"
-          ]
-        },
+        "detalles": 
+            "Cocina carne.Rellena tortillas y sirve.ingredientes: Carnitas de cerdo,Tortillas de maíz,Cebolla,Cilantro",
         "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKVvz-Wx0MONUbWxL7H4tyK2OdpVday4ZBv9JH9nuFI16pyKaMT5u_zpENXO4Ko_qQWIk&usqp=CAU"
       },
       { "id": 7,
         "titulo": "Ensalada Griega",
         "subtitulo": "Sabores mediterráneos en cada bocado.",
         "tipo": "navidad",
-        "detalles": {
-          "proceso": [
-            "Mezcla ingredientes.",
-            "Adereza y sirve."
-          ],
-          "ingredientes": [
-            "Lechuga",
-            "Pepino",
-            "Tomate",
-            "Aceitunas",
-            "Queso feta"
-          ]
-        },
+        "detalles": 
+            "Mezcla ingredientes.Adereza y sirve.ingredientes:Lechuga,Pepino,Tomate,Aceitunas,Queso feta",
         "img_url": "https://www.comedera.com/wp-content/uploads/2018/05/ensalada-griega.jpg"
       }
     ]
