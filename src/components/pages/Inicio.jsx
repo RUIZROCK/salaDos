@@ -39,12 +39,12 @@ const Inicio = () => {
             </Container>
             <h2 className="h2"> Cocinar siempre es mejor de a 2</h2>
             <Container >
-
-
-                <Row className="justify-content-between">
+                <div className="row d-flex justify-content-around">
                     {
-                        recetas.slice(0, 3).map((receta) =>
-                            <Card key={receta.id} style={{ width: '18rem' }}>
+                        recetas.map((receta) =>
+
+                        <div key={receta.id} className="col-12 col-md-3 mx-2 py-2">
+                            <Card  style={{ width: '18rem' }}>
                                 <Card.Img  className="img-comida" variant="top" src={receta.img_url} />
                                 <Card.Body>
                                     <Card.Title>{receta.titulo}</Card.Title>
@@ -57,41 +57,14 @@ const Inicio = () => {
                                         className="btn btn-success mx-1"
                                         end
                                         to={`/DetalleReceta/${receta.id}`}
-                                    >
-                                        <Button variant="success">Ver más</Button>
-                                    </Link>
-                                    
-                                </Card.Body>
-                            </Card>
-                        )
-                    }
-                </Row>
-                <Row className="justify-content-between py-3">
-                    {
-                        recetas.slice(3, 6).map((receta) =>
-                            <Card key={receta.id} style={{ width: '18rem' }}>
-                                <Card.Img className="img-comida" variant="top" src={receta.img_url} />
-                                <Card.Body>
-                                    <Card.Title>{receta.titulo}</Card.Title>
-
-                                    <Card.Text>
-                                        {receta.subtitulo}
-                                    </Card.Text>
-                                    <Link
-                                        className="btn btn-success mx-1"
-                                        end
-                                        to={`/DetalleReceta/${receta.id}`}
-                                    >
-                                        <Button variant="success">Ver más</Button>
+                                    >Ver más
                                     </Link>
                                 </Card.Body>
                             </Card>
+                            </div>
                         )
                     }
-                </Row>
-
-                
-
+                </div>
             </Container>
         </>
 
