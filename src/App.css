@@ -6,5 +6,54 @@
 }
 
 .mainContainer {
- flex-grow: 1; 
+  flex-grow: 1;
+
+ 
+}
+
+
+.banner{
+  width: 100%;
+}
+
+footer {
+  justify-self: end;
+  background:#d11514;
+}
+
+.menu {
+  background-color: #d11514;
+  
+}
+
+.logo {
+width: 4rem;
+
+}
+
+footer p {
+  font-size: medium;
+}
+
+
+h1{
+  text-align: center;
+  font-size: 3rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: auto;
+  padding: 1rem;
+
+
+}
+
+h2 {
+  text-align: center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+padding: 2rem;
+}
+
+.img-comida
+{
+  height: 200px;
+  
 }

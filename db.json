@@ -1,6 +1,7 @@
 {
     "recetas": [
       {
+        "id": 1,
         "titulo": "Pasta Alfredo con Pollo",
         "subtitulo": "¡Deliciosa pasta cremosa italiana!",
         "tipo": "especial",
@@ -17,9 +18,10 @@
             "Queso parmesano"
           ]
         },
-        "img_url": "https://ejemplo.com/pasta_alfredo_pollo.jpg"
+        "img_url": "https://www.justspices.es/media/recipe/pollo-alfredo.jpg"
       },
       {
+        "id": 2,
         "titulo": "Sushi de Salmón",
         "subtitulo": "Opción fresca y saludable japonesa.",
         "tipo": "comun",
@@ -35,9 +37,10 @@
             "Alga nori"
           ]
         },
-        "img_url": "https://ejemplo.com/sushi_salmón.jpg"
+        "img_url": "https://www.oliveradatenea.com/wp-content/uploads/2023/06/Sushi-rolls-de-salmon-y-Olivada-Olivera-dAtenea.jpg"
       },
       {
+        "id": 3,
         "titulo": "Empanadas Argentinas",
         "subtitulo": "Bocado irresistible de Argentina.",
         "tipo": "tradicional",
@@ -53,9 +56,10 @@
             "Aceitunas verdes"
           ]
         },
-        "img_url": "https://ejemplo.com/empanadas_argentinas.jpg"
+        "img_url": "https://previews.123rf.com/images/albertgonzlez/albertgonzlez2212/albertgonzlez221202682/196180801-empanadas-argentinas-en-forma-de-corazones-receta-de-san-valent%C3%ADn.jpg"
       },
       {
+        "id": 4,
         "titulo": "Hamburguesa Clásica",
         "subtitulo": "Hamburguesa jugosa y llena de sabor.",
         "tipo": "comun",
@@ -71,9 +75,10 @@
             "Tomate"
           ]
         },
-        "img_url": "https://ejemplo.com/hamburguesa_clasica.jpg"
+        "img_url": "https://i0.wp.com/www.pasionthermomix.co/wp-content/uploads/2019/04/hamburguesa-americana-de-0-a-100.jpg?fit=768%2C480&ssl=1"
       },
       {
+        "id": 5,
         "titulo": "Pizza Margarita",
         "subtitulo": "Pizza simple y deliciosa italiana.",
         "tipo": "especial",
@@ -89,9 +94,9 @@
             "Mozzarella"
           ]
         },
-        "img_url": "https://ejemplo.com/pizza_margarita.jpg"
+        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc2YfCU2DGecuFdAS1WnCDBNQmIS_CwNyQ5JDL6Yu9VQ&s"
       },
-      {
+      { "id": 6,
         "titulo": "Tacos de Carnitas",
         "subtitulo": "Platillo mexicano auténtico.",
         "tipo": "comun",
@@ -107,9 +112,9 @@
             "Cilantro"
           ]
         },
-        "img_url": "https://ejemplo.com/tacos_carnitas.jpg"
+        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKVvz-Wx0MONUbWxL7H4tyK2OdpVday4ZBv9JH9nuFI16pyKaMT5u_zpENXO4Ko_qQWIk&usqp=CAU"
       },
-      {
+      { "id": 7,
         "titulo": "Ensalada Griega",
         "subtitulo": "Sabores mediterráneos en cada bocado.",
         "tipo": "navidad",
@@ -126,7 +131,7 @@
             "Queso feta"
           ]
         },
-        "img_url": "https://ejemplo.com/ensalada_griega.jpg"
+        "img_url": "https://www.comedera.com/wp-content/uploads/2018/05/ensalada-griega.jpg"
       }
     ]
   }
