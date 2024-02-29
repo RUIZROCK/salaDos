@@ -1,8 +1,33 @@
 import { Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { leerRecetasAPI } from "../helpers/queries";
+import Swal from "sweetalert2";
+import { useState, useEffect } from "react";
+
 
 const Inicio = () => {
+    const [recetas, setRecetas] = useState([]);
+
+    useEffect(() => {
+        obtenerRecetas();
+    }, []);
+
+    const obtenerRecetas = async () => {
+        const respuesta = await leerRecetasAPI();
+        if (respuesta.status === 200) {
+            const datos = await respuesta.json();
+            setRecetas(datos);
+        } else {
+            Swal.fire({
+                title: "Ocurrio un error",
+                text: `Intenta esta operación en unos minutos.`,
+                icon: "error",
+            });
+        }
+    };
+
     return (
         <>
             <h1> Las Mejores Recetas para Dos</h1>
@@ -14,81 +39,58 @@ const Inicio = () => {
             </Container>
             <h2 className="h2"> Cocinar siempre es mejor de a 2</h2>
             <Container >
+
+
+                <Row className="justify-content-between">
+                    {
+                        recetas.slice(0, 3).map((receta) =>
+                            <Card key={receta.id} style={{ width: '18rem' }}>
+                                <Card.Img  className="img-comida" variant="top" src={receta.img_url} />
+                                <Card.Body>
+                                    <Card.Title>{receta.titulo}</Card.Title>
+
+                                    <Card.Text>
+                                        {receta.subtitulo}
+                                    </Card.Text>
+
+                                    <Link
+                                        className="btn btn-success mx-1"
+                                        end
+                                        to={`/DetalleReceta/${receta.id}`}
+                                    >
+                                        <Button variant="success">Ver más</Button>
+                                    </Link>
+                                    
+                                </Card.Body>
+                            </Card>
+                        )
+                    }
+                </Row>
+                <Row className="justify-content-between py-3">
+                    {
+                        recetas.slice(3, 6).map((receta) =>
+                            <Card key={receta.id} style={{ width: '18rem' }}>
+                                <Card.Img className="img-comida" variant="top" src={receta.img_url} />
+                                <Card.Body>
+                                    <Card.Title>{receta.titulo}</Card.Title>
+
+                                    <Card.Text>
+                                        {receta.subtitulo}
+                                    </Card.Text>
+                                    <Link
+                                        className="btn btn-success mx-1"
+                                        end
+                                        to={`/DetalleReceta/${receta.id}`}
+                                    >
+                                        <Button variant="success">Ver más</Button>
+                                    </Link>
+                                </Card.Body>
+                            </Card>
+                        )
+                    }
+                </Row>
+
                 
-                    <Row className="justify-content-between">
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the content.
-                                </Card.Text>
-                                <Button variant="primary">Ver Receta</Button>
-                            </Card.Body>
-                        </Card>
-
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the content.
-                                </Card.Text>
-                                <Button variant="primary">Ver Receta</Button>
-                            </Card.Body>
-                        </Card>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the content.
-                                </Card.Text>
-                                <Button variant="primary">Ver Receta</Button>
-                            </Card.Body>
-                        </Card>
-                    </Row>
-                    <Row className="justify-content-between py-3">
-
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the content.
-                                </Card.Text>
-                                <Button variant="primary">Ver Receta</Button>
-                            </Card.Body>
-                        </Card>
-
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the content.
-                                </Card.Text>
-                                <Button variant="primary">Ver Receta</Button>
-                            </Card.Body>
-                        </Card>
-
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the content.
-                                </Card.Text>
-                                <Button variant="primary">Ver Receta</Button>
-                            </Card.Body>
-                        </Card>
-                    </Row>
 
             </Container>
         </>

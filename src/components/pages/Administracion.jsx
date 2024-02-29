@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { leerRecetasAPI } from "../helpers/queries";
 import { useEffect, useState } from "react";
-import ItemReceta from "./Receta/ItemReceta";
+import ItemReceta from "./receta/ItemReceta";
 
 const Administracion = () => {
   const [recetas, setRecetas] = useState([]);
@@ -31,7 +31,7 @@ const Administracion = () => {
       <section className="py-3">
         <div className="row d-flex justify-content-between py-2 ">
           <div className="col-12 col-md-3">
-            <h3>Administracion</h3>
+            <h3>Administración</h3>
           </div>
           <div className="col-12 col-md-1">
             <Link

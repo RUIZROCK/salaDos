@@ -9,28 +9,29 @@ import FormularioReceta from "./components/pages/FormularioReceta"
 import Footer from "./components/common/Footer";
 import { BrowserRouter } from "react-router-dom"
 import Inicio from "./components/pages/Inicio";
+import Error404 from "./components/pages/Error404";
 
 function App() {
 
   return (
     <>
     
-    <BrowserRouter>
-    <Menu></Menu>
-    <Inicio></Inicio>
-    <Routes>
-      <Route exact path='/Administracion' element={<Administracion></Administracion>}></Route>
-      <Route exact path='/DetalleReceta' element={<DetalleReceta></DetalleReceta>}></Route>
-      <Route exact path='/FormularioReceta/nuevo' element={<FormularioReceta editar={false} titulo="Nueva Receta" ></FormularioReceta>}></Route>
-      <Route exact path='/FormularioReceta/editar/:id' element={<FormularioReceta editar={true} titulo="Editar Receta"></FormularioReceta>}></Route>
-    </Routes>
-
-    <Footer>
+      <BrowserRouter>
+        <Menu></Menu>
       
-    </Footer>
-    
-    
-    </BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={ <Inicio></Inicio>}></Route>
+          <Route exact path='/Inicio' element={ <Inicio></Inicio>}></Route>
+          <Route exact path='/Administracion' element={<Administracion></Administracion>}></Route>
+          <Route exact path='/DetalleReceta/:id' element={<DetalleReceta></DetalleReceta>}></Route>
+          <Route exact path='/FormularioReceta/nuevo' element={<FormularioReceta editar={false} titulo="Nueva Receta" ></FormularioReceta>}></Route>
+          <Route exact path='/FormularioReceta/editar/:id' element={<FormularioReceta editar={true} titulo="Editar Receta"></FormularioReceta>}></Route>
+          <Route path='*' element={ <Error404 /> }></Route>
+        </Routes>
+
+        <Footer></Footer>
+        
+      </BrowserRouter>
     </>
   )
 }

@@ -65,7 +65,7 @@ const ItemReceta = ({ receta, setRecetas }) => {
                   <Link
                     className="btn btn-success mx-1"
                     end
-                    to="/DetalleReceta"
+                    to={`/DetalleReceta/${receta.id}`}
                   >
                     <i className="bi bi-eye-fill"></i>
                   </Link>

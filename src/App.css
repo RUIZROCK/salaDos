@@ -11,6 +11,11 @@
  
 }
 
+
+.banner{
+  width: 100%;
+}
+
 footer {
   justify-self: end;
   background:#d11514;
@@ -33,7 +38,7 @@ footer p {
 
 h1{
   text-align: center;
-  font-size:xx-large;
+  font-size: 3rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: auto;
   padding: 1rem;
@@ -45,4 +50,10 @@ h2 {
   text-align: center;
 font-family: Georgia, 'Times New Roman', Times, serif;
 padding: 2rem;
+}
+
+.img-comida
+{
+  height: 200px;
+  
 }
