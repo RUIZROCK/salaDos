@@ -32,7 +32,7 @@ const navegacion = useNavigate();
       setValue('subtitulo', recetaBuscado.subtitulo);
       setValue('tipo', recetaBuscado.tipo);
       setValue('img_url', recetaBuscado.img_url);
-      setValue('detalles', recetaBuscado.detalles);
+      setValue('detalle', recetaBuscado.detalle);
     }
   }
 
@@ -135,7 +135,7 @@ const navegacion = useNavigate();
             <Form.Label>Detalles</Form.Label>
             <Form.Control type="text" placeholder="Ej: Un asado se realiza..." 
             as="textarea"
-            {...register("detalles", {
+            {...register("detalle", {
               required: "Los detalles de la receta es obligatoria",
               minLength: {
                 value: 10,
@@ -148,7 +148,7 @@ const navegacion = useNavigate();
             })}
           />
           <Form.Text className="text-danger">
-            {errors.detalles?.message}
+            {errors.detalle?.message}
           </Form.Text>
           </Form.Group>
 

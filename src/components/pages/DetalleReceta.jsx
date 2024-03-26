@@ -45,7 +45,7 @@ const DetalleReceta = () => {
               <strong>Tipo:</strong>{receta.tipo}
               <br />
               <br />
-              {receta.detalles}
+              {receta.detalle}
             </p>
             <NavLink className="my-3 btn btn-primary" end to="/Administracion">
               Volver
