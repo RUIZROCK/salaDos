@@ -18,7 +18,7 @@ const DetalleReceta = () => {
     const respuesta = await leerRecetasAPI();
     if (respuesta.status === 200) {
       const datos = await respuesta.json();
-      setReceta(datos.find((receta) => receta.id == id));
+      setReceta(datos.find((receta) => receta._id == id));
     } else {
       Swal.fire({
         title: "Ocurrio un error",

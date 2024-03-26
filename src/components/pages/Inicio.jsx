@@ -43,7 +43,7 @@ const Inicio = () => {
                     {
                         recetas.map((receta) =>
 
-                        <div key={receta.id} className="col-12 col-md-3 mx-2 py-2">
+                        <div key={receta._id} className="col-12 col-md-3 mx-2 py-2">
                             <Card  style={{ width: '18rem' }}>
                                 <Card.Img  className="img-comida" variant="top" src={receta.img_url} />
                                 <Card.Body>
@@ -56,7 +56,7 @@ const Inicio = () => {
                                     <Link
                                         className="btn btn-success mx-1"
                                         end
-                                        to={`/DetalleReceta/${receta.id}`}
+                                        to={`/DetalleReceta/${receta._id}`}
                                     >Ver más
                                     </Link>
                                 </Card.Body>

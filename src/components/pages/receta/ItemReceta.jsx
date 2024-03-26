@@ -18,7 +18,7 @@ const ItemReceta = ({ receta, setRecetas }) => {
         }).then(async (result) => {
           if (result.isConfirmed) {
             //agregar la logica correspondiente para borrar el producto en la api
-            const respuesta = await borrarRecetaAPI(receta.id);
+            const respuesta = await borrarRecetaAPI(receta._id);
             if (respuesta.status === 200) {
               Swal.fire({
                 title: "Producto eliminado",
@@ -51,7 +51,7 @@ const ItemReceta = ({ receta, setRecetas }) => {
 
     return (
         <tr>
-              <td>{receta.id}</td>
+              <td>{receta._id}</td>
               <td>{receta.titulo}</td>
               <td>
               <img
@@ -65,14 +65,14 @@ const ItemReceta = ({ receta, setRecetas }) => {
                   <Link
                     className="btn btn-success mx-1"
                     end
-                    to={`/DetalleReceta/${receta.id}`}
+                    to={`/DetalleReceta/${receta._id}`}
                   >
                     <i className="bi bi-eye-fill"></i>
                   </Link>
                   <Link
                     className="btn btn-warning mx-1"
                     end
-                    to={'/FormularioReceta/editar/'+ receta.id}
+                    to={'/FormularioReceta/editar/'+ receta._id}
                   >
                     <i className="bi bi-pencil-square"></i>
                   </Link>
